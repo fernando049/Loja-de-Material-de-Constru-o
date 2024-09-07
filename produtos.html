@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Produtos - Loja de Material de Construção</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="produtos.html"><i class="fas fa-box-open"></i> Produtos</a></li>
+                <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+            <form class="search-form">
+                <input type="text" placeholder="Pesquisar...">
+                <button type="submit"><i class="fas fa-search"></i></button> 
+            </form>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filtros">
+            <h2>Filtros</h2>
+            <br>
+            <form>
+                <select>
+                    <option value="">Categoria</option>
+                    <option value="eletrica">Elétrica</option>
+                    <option value="hidraulica">Hidráulica</option>
+                    <option value="ferramentas">Ferramentas</option> 
+                    <option value="acabamentos">Acabamentos</option> 
+                </select>
+                <select>
+                    <option value="">Ordenar por</option>
+                    <option value="preco">Preço</option>
+                    <option value="nome">Nome</option>
+                </select>
+                <button type="submit">Aplicar</button>
+            </form>
+        </section>
+
+        <section class="produtos">
+            <h2>Produtos</h2>
+
+            <div class="produto">
+                <img src="/imagens/Cimento.jpg" alt="Cimento">
+                <h3>Cimento Portland 50kg</h3>
+                <p>R$ 35,00</p>
+                <a href="#" class="ver-detalhes">Ver Detalhes</a>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <div class="descricao">
+                    <p>Cimento de alta resistência para obras de grande porte. Indicado para concreto, argamassa e reboco.</p>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="/imagens/tijolo.jpg" alt="Tijolo">
+                <h3>Tijolo Cerâmico 8 furos</h3>
+                <p>R$ 0,80</p>
+                <a href="#" class="ver-detalhes">Ver Detalhes</a>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <div class="descricao">
+                    <p>Cimento de alta resistência para obras de grande porte. Indicado para concreto, argamassa e reboco.</p>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="/imagens/lampada.jpg" alt="Lâmpada">
+                <h3>Lâmpada LED 9W</h3>
+                <p>R$ 12,00</p>
+                <a href="#" class="ver-detalhes">Ver Detalhes</a>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <div class="descricao">
+                    <p>Cimento de alta resistência para obras de grande porte. Indicado para concreto, argamassa e reboco.</p>
+                </div>>
+            </div>
+
+            <div class="produto">
+                <img src="/imagens/torneira.jpg" alt="Torneira">
+                <h3>Torneira para Pia Cromada</h3>
+                <p>R$ 80,00</p>
+                <a href="#" class="ver-detalhes">Ver Detalhes</a>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <div class="descricao">
+                    <p> Item essencial para cozinha ou banheiro, com acabamento cromado durável, design versátil e funcionalidade prática.</p>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="/imagens/furadeira.jpg" alt="Furadeira">
+                <h3>Furadeira de Impacto 600W</h3>
+                <p>R$ 250,00</p>
+                <a href="#" class="ver-detalhes">Ver Detalhes</a>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <div class="descricao">
+                    <p> Potente e versátil para perfurar concreto, madeira e metal, com função de impacto e velocidade variável.</p>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="/imagens/porcelanato.jpg" alt="Porcelanato">
+                <h3>Porcelanato Polido Marmore 60x60cm</h3>
+                <p>R$ 55,00/m²</p>
+                <a href="#" class="ver-detalhes">Ver Detalhes</a>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button> 
+                <div class="descricao">
+                    <p>Revestimento cerâmico elegante e durável que imita o mármore, com acabamento brilhante e ideal para ambientes sofisticados.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <form class="orcamento" id="formulario-orcamento"> 
+            <h3>Solicite um Orçamento</h3>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </footer>
+
+    <script>
+        const formularioOrcamento = document.getElementById('formulario-orcamento');
+    
+        formularioOrcamento.addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+    
+            // Aqui você pode coletar os dados do formulário e enviá-los para o servidor
+            // Usando AJAX ou outro método de sua preferência
+    
+            // Simulação de envio com sucesso
+            alert('Orçamento enviado com sucesso! Em breve entraremos em contato.');
+    
+            // Limpa o formulário após o envio (opcional)
+            formularioOrcamento.reset();
+        });
+    </script>
+       
+</body>
+</html>
